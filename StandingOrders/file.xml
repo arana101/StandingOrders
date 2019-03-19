@@ -1,0 +1,55 @@
+﻿<?xml version="1.0"?>
+<data>
+	<URL>https://staging.natmedtrans.com/QANMNSchedulerNewUI</URL>
+	<Scheduler>
+		<LoginInfo>
+			<Login>alomakin2000</Login>
+			<Password>pcf64AKm</Password>
+			<AuthorizationNumber>AL7687</AuthorizationNumber>
+		</LoginInfo>
+		<Caller>
+			<FirstName>Sansa</FirstName>
+			<LastName>Stark</LastName>
+			<ContactNo>1111111111</ContactNo>
+			<Email></Email>
+		</Caller>
+		<Member>
+			<MemberId>117317721</MemberId>
+			<HomeAddress>
+				<Street>5350 MISSOURI AVE</Street>
+				<City>JACKSONVILLE</City>
+				<State>FL</State>
+				<Zip>32254</Zip>
+				<County>DUVAL</County>
+			</HomeAddress>
+		</Member>
+		<AppointmentInfo>
+      <AppointmentDate>04/22/2019</AppointmentDate>
+      <Frequency>3</Frequency>
+      <Dates>
+        <Sunday>0</Sunday>
+        <Monday>1</Monday>
+        <Tuesday>1</Tuesday>
+        <Wednesday>1</Wednesday>
+        <Thursday>0</Thursday>
+        <Friday>0</Friday>
+        <Saturday>0</Saturday>
+      </Dates>
+			<TripPurpose>Physical Therapy</TripPurpose>
+			<BenefitPlan>UHFL-MMA</BenefitPlan>
+			<MOT>Livery</MOT>
+			<DestinationAddressNetworkProvider>
+				<DestiantionName>METRO TREATMENT OF FLORIDA</DestiantionName>
+				<Street>1823 Business Park Boulevard</Street>
+				<City>Daytona Beach</City>
+				<State>FL</State>
+				<Zip>32114</Zip>
+				<County>Volusia</County>
+				<FacilityPhone>6726348001</FacilityPhone>
+			</DestinationAddressNetworkProvider>
+		</AppointmentInfo>
+		<Provider>
+			<ProviderName>Reid Transportation, LLC</ProviderName>
+		</Provider>
+	</Scheduler>
+</data>

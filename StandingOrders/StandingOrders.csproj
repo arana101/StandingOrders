@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A667BBFE-50A8-483C-A62F-3BAA68890F88}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StandingOrders</RootNamespace>
+    <AssemblyName>StandingOrders</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BasePage.cs" />
+    <Compile Include="Base\BasePageAsserter.cs" />
+    <Compile Include="Base\BasePageElementMap.cs" />
+    <Compile Include="Methods.cs" />
+    <Compile Include="Driver.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Pages\DashboardPage\DashboardPage.cs" />
+    <Compile Include="Pages\DashboardPage\DashboardPageAsserter.cs" />
+    <Compile Include="Pages\DashboardPage\DashboardPageMap.cs" />
+    <Compile Include="Pages\LoginPage\LoginPage.cs" />
+    <Compile Include="Pages\LoginPage\LoginPageAsserter.cs" />
+    <Compile Include="Pages\LoginPage\LoginPageMap.cs" />
+    <Compile Include="Pages\MembersPage\MembersPage.cs" />
+    <Compile Include="Pages\MembersPage\MembersPageAsserter.cs" />
+    <Compile Include="Pages\MembersPage\MembersPageMap.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\ScheduleNewTripPage.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\ScheduleNewTripPageAsserter.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\ScheduleNewTripPageData.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\ScheduleNewTripPageMap.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\TripTypes\RecurringTrip\RecurringTrip.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\TripTypes\RecurringTrip\RecurringTripAsserter.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\TripTypes\RecurringTrip\RecurringTripMap.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\TripTypes\RoundTrip\RoundTrip.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\TripTypes\RoundTrip\RoundTripAsserter.cs" />
+    <Compile Include="Pages\MembersPage\ScheduleNewTripPage\TripTypes\RoundTrip\RoundTripMap.cs" />
+    <Compile Include="Pages\Modals\ConfirmRecurringModal\ConfirmRecurringModal.cs" />
+    <Compile Include="Pages\Modals\ConfirmRecurringModal\ConfirmRecurringModalAsserter.cs" />
+    <Compile Include="Pages\Modals\ConfirmRecurringModal\ConfirmRecurringModalMap.cs" />
+    <Compile Include="Pages\Modals\PrivacyPolicy\PrivacyPolicyModal.cs" />
+    <Compile Include="Pages\Modals\PrivacyPolicy\PrivacyPolicyModalAsserter.cs" />
+    <Compile Include="Pages\Modals\PrivacyPolicy\PrivacyPolicyModalMap.cs" />
+    <Compile Include="Pages\Modals\SweetAlertModal\SweetAlertModal.cs" />
+    <Compile Include="Pages\Modals\SweetAlertModal\SweetAlertModalAsserter.cs" />
+    <Compile Include="Pages\Modals\SweetAlertModal\SweetAlertModalMap.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="WebDriverExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="file.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tests\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.45\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.45\build\Selenium.Chrome.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.2.45\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.45\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+  </Target>
+</Project>
